@@ -19,7 +19,7 @@ const handleSubmit = (e) => {
 }
 
 return (
-        <form onSubmit={handleSubmit}>
+        <form className="formInput" onSubmit={handleSubmit}>
             <input onChange={changeInput} value={text} type="text"
                 placeholder="Write something..">
             </input>

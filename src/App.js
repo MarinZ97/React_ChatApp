@@ -49,11 +49,13 @@ class App extends Component {
 
     return (
       <div className="App">
-          <h1>Chat</h1>
+        <div className="Header">
+          <h1>Chat App</h1>
+        </div>
         <Messages
           messages={this.state.text}
           currentMember={this.state.member}
-          />
+        />
         <Input onSendMessage={this.sendMessage}/>
       </div>
     );
