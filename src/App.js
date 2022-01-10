@@ -22,13 +22,15 @@ class App extends Component {
       if (error) {
         return console.error(error);
       }
-      console.log("Test", this.drone)
+      else {
+        console.log("Connected")
+      }
       const member = {...this.state.member};
       member.id = this.drone.clientId;
       this.setState({member});
     });
 
-    const room = this.drone.subscribe("observable-room-chat");
+    const room = this.drone.subscribe("observable-chat-room");
     room.on("data", (data, member) => {
       const messages = this.state.text;
       messages.push({member, text: data});
@@ -39,7 +41,7 @@ class App extends Component {
 
  sendMessage = (message) => {
   this.drone.publish({
-    room: "observable-room-chat",
+    room: "observable-chat-room",
     message
   });
   this.setState({message});
