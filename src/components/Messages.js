@@ -1,9 +1,8 @@
 import React from 'react';
-import { Component } from 'react';
 import '../App.css';
 
 
-export default class Messages extends Component {
+export default class Messages extends React.Component {
     render() {
         const {messages} = this.props;
         return (

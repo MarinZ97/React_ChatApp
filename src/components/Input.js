@@ -23,6 +23,9 @@ return (
             <input onChange={changeInput} value={text} type="text"
                 placeholder="Write something..">
             </input>
+            <button className='btnInput' disabled={!text}>
+                <i className="fas fa-paper-plane"></i>
+            </button>
         </form>
     );
 }
