@@ -87,6 +87,8 @@ input {
   padding: 0.4em;
   display: inline-block;
   color: white;
+  word-wrap: break-word;
+  max-width: 600px;
 }
 
 ::placeholder {
@@ -94,4 +96,14 @@ input {
   padding-left: 0.2em;
 }
 
+@media (max-width: 768px) {
+  .text {
+    max-width: 400px;
+  }
+}
 
+@media (max-width: 480px) {
+  .text {
+    max-width: 300px;
+  }
+}

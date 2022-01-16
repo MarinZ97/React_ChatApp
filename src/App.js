@@ -17,10 +17,7 @@ class App extends React.Component {
   }
 
   componentDidMount() {
-    this.drone = new window.Scaledrone('5D9V0tsX5DxmjSvr', {data: this.state.member});
-    console.log("Drone prikaz:", this.drone)
-    
-
+    this.drone = new window.Scaledrone('5D9V0tsX5DxmjSvr', {data: this.state.member});    
     this.drone.on('open', error => {
       if (error) {
         return console.error(error);
